@@ -1,0 +1,92 @@
+fun main() {
+    val a = 2;
+    val b = 4;
+    println("sum of $a and $b is ${a+b}")
+}
+
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+
+fun main() {
+    val daysOfWeek = listOf("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
+	for (item in daysOfWeek){
+    	println(item)
+    }
+    
+    println("t")
+    val t = daysOfWeek.filter {it.startsWith("t")}
+    for (item in t){
+    	println(item)
+    }
+    
+    println("e")
+    val e = daysOfWeek.filter {it.contains("e")}
+    for (item in e){
+    	println(item)
+    }
+    
+    println("length")
+    for (item in daysOfWeek){
+    	println(item.length)
+    }
+}
+
+fun isPrime(number: Int): Boolean {
+    if (number <= 1) {
+        return false
+    }
+    if (number <= 3) {
+        return true
+    }
+    if (number % 2 == 0 || number % 3 == 0) {
+        return false
+    }
+    var i = 5
+    while (i * i <= number) {
+        if (number % i == 0 || number % (i + 2) == 0) {
+            return false
+        }
+        i += 6
+    }
+    return true
+}
+
+fun main() {
+    val startRange = 1
+    val endRange = 50
+
+    println("Prime numbers between $startRange and $endRange:")
+    for (number in startRange..endRange) {
+        if (isPrime(number)) {
+            println(number)
+        }
+    }
+}
+
+fun encode(input: String): String {
+    val encodedChars = input.map { char -> (char.code + 1).toChar() }
+    return encodedChars.joinToString("")
+}
+
+fun decode(input: String): String {
+    val decodedChars = input.map { char -> (char.code - 1).toChar() }
+    return decodedChars.joinToString("")
+}
+
+fun messageCoding(msg: String, func: (String) -> String): String {
+    return func(msg)
+}
+
+fun main() {
+    val originalMessage = "Hello, World!"
+    
+    val encodedMessage = messageCoding(originalMessage, ::encode)
+    val decodedMessage = messageCoding(encodedMessage, ::decode)
+    
+    println("Original Message: $originalMessage")
+    println("Encoded Message: $encodedMessage")
+    println("Decoded Message: $decodedMessage")
+}
+
