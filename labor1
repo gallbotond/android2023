@@ -98,3 +98,29 @@ fun main() {
     println("Even numbers:")
     printEvenNumbers(numberList)
 }
+
+fun main() {
+    // Immutable list of days
+    val daysOfWeek = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+    
+    // Convert to a mutable list
+    val mutableDaysOfWeek = daysOfWeek.toMutableList()
+
+    // Remove days containing 'n'
+    mutableDaysOfWeek.removeIf { it.contains('n') }
+
+    // Print the filtered list
+    println(mutableDaysOfWeek)
+
+    // Print each element with its index
+    for ((index, day) in mutableDaysOfWeek.withIndex()) {
+        println("Item at $index is $day")
+    }
+
+    // Sort the list alphabetically
+    mutableDaysOfWeek.sort()
+
+    // Print the sorted list
+    println(mutableDaysOfWeek)
+}
+
