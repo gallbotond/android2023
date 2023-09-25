@@ -124,3 +124,34 @@ fun main() {
     println(mutableDaysOfWeek)
 }
 
+
+import kotlin.random.Random
+
+fun main() {
+    // Generate an array of 10 random integers between 0 and 100
+    val randomIntArray = Array(10) { Random.nextInt(0, 101) }
+
+    // Print each element of the array using forEach
+    println("Array elements:")
+    randomIntArray.forEach { println(it) }
+
+    // Sort the array in ascending order
+    val sortedArray = randomIntArray.sorted()
+    println("\nSorted array:")
+    sortedArray.forEach { println(it) }
+
+    // Check if the array contains any even number
+    val containsEven = randomIntArray.any { it % 2 == 0 }
+    println("\nContains even number: $containsEven")
+
+    // Check if all numbers in the array are even
+    val allEven = randomIntArray.all { it % 2 == 0 }
+    println("All numbers are even: $allEven")
+
+    // Calculate the average of generated numbers and print it using forEach
+    var sum = 0
+    randomIntArray.forEach { sum += it }
+    var average = sum.toDouble() / randomIntArray.size;
+    println("\nAverage:")
+    println(average)
+}
