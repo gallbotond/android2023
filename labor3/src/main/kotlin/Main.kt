@@ -2,7 +2,7 @@ import java.io.BufferedReader
 import java.io.File
 
 fun main(args: Array<String>) {
-//    println("Hello, World!")
+    println("Hello, World!")
 //    read a txt file line by line and display it's content in the terminal
     val file = File("src/main/resources/questions.txt")
     val bufferedReader: BufferedReader = file.bufferedReader()
