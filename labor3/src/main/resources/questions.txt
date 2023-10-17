@@ -1,0 +1,60 @@
+1. What is Kotlin's primary use case?
+A) Web development
+B) Mobile app development
+C) Game development
+D) All of the above
+1
+2. In Kotlin, which keyword is used to declare a variable that can be reassigned?
+A) val
+B) var
+C) const
+D) final
+2
+3. What is a data class in Kotlin primarily used for?
+A) Inheritance
+B) Immutability and modeling data
+C) Loop control
+D) Exception handling
+2
+4. Which of the following is NOT a built-in data type in Kotlin?
+A) Int
+B) Double
+C) Decimal
+D) Char
+3
+5. In Kotlin, what does the "if" expression return when used without an "else" branch?
+A) null
+B) 0
+C) Unit
+D) Boolean
+3
+6. What is Kotlin's equivalent of a Java static method?
+A) companion object
+B) static fun
+C) object
+D) staticObject
+1
+7. Which keyword is used to define an extension function in Kotlin?
+A) fun
+B) extend
+C) extension
+D) infix
+1
+8. In Kotlin, what is the "Elvis operator" used for?
+A) Bitwise operations
+B) Null safety and providing default values
+C) Loop control
+D) Type casting
+2
+9. What is the purpose of the "lateinit" modifier in Kotlin?
+A) To declare a variable as immutable
+B) To declare a variable as nullable
+C) To initialize a variable lazily
+D) To declare a variable as final
+3
+10. Which keyword is used to define a sealed class in Kotlin?
+A) abstract
+B) sealed
+C) data
+D) enum
+2
