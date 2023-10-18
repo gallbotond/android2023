@@ -2,13 +2,13 @@ import java.io.BufferedReader
 import java.io.File
 
 class ItemRepository {
-    private val items: List<Item> = listOf()
+    private var items: List<Item> = listOf()
 
 //    val getItems: List<Item>
 //        get() = items
 
     fun save(item: Item) {
-        items.plus(item)
+        items = items.plus(item)
     }
 
     fun getItems(): List<Item> {

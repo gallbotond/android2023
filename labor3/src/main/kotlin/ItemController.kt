@@ -1,6 +1,7 @@
 class ItemController(private val itemService: ItemService) {
     fun quiz(numQuestions: Int) {
         val randomItems = itemService.selectRandomItems(numQuestions)
+//        println(randomItems.size)
 
         for (item in randomItems) {
             println(item.question)
