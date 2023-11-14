@@ -1,11 +1,17 @@
 package com.example.foodapp.fragments
 
+import RecipeRepository
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.example.foodapp.R
+import com.example.foodapp.model.RecipeModel
+import com.example.foodapp.view.RecipeListViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +28,21 @@ class RecipesFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private val recipeViewModel: RecipeListViewModel by viewModels()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Load instructions data
+        recipeViewModel.loadRecipeData(requireContext())
+
+        // Observe instructions data
+        recipeViewModel.recipeModels.observe(viewLifecycleOwner) { instructions ->
+            for (instructionModel in instructions) {
+                Log.d("Recipes", instructionModel.toString())
+            }
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
