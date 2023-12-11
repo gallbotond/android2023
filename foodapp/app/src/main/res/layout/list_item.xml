@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp">
+    android:layout_margin="16dp"
+    android:id="@+id/recipeListItem">
 
     <ImageView
         android:id="@+id/recipeImageView"
@@ -12,8 +13,8 @@
         android:layout_height="100dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/recipeTitleTextView"
