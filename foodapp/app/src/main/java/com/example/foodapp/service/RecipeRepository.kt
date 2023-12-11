@@ -1,39 +1,46 @@
 import android.content.Context
-import com.example.foodapp.R
-import com.example.foodapp.dto.RecipeDTO
-import com.example.foodapp.model.InstructionModel
+import android.util.Log
 import com.example.foodapp.model.RecipeModel
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import java.io.BufferedReader
-import java.io.InputStreamReader
+import org.json.JSONArray
+import java.io.InputStream
 
 class RecipeRepository {
+    var recipeModels: ArrayList<RecipeModel> = ArrayList<RecipeModel>()
+    fun fetchData(context: Context) {
+        Log.i("GSON", "Fetching data...")
+        Log.i("GSON", "Context: $context")
+        val inputStream: InputStream = context.assets.open("recipes.json")
+        val json = inputStream.bufferedReader().use { it.readText() }
+        Log.i("GSON", "JSON read")
+//        val buffer = ByteArray(inputStream.available())
+//        Log.i("GSON", "Buffer created, length: ${buffer.size}")
+        val jsonArray = JSONArray(json)
+        Log.i("GSON", "JSON Array read")
 
-    // Replace 'YourFileName.json' with the actual JSON file name in the assets directory
-    private val fileName = "foodapp/app/src/main/res/raw/recipes.json"
+        var name: String
+        var image: String
+        var description: String
+        var rating: Float
 
-    // Function to read JSON data from a file and parse it into a list of RecipeDTO objects
-    private fun readJsonData(): List<RecipeDTO> {
-        val inputStream = javaClass.classLoader?.getResourceAsStream(fileName)
-        val reader = BufferedReader(InputStreamReader(inputStream))
-        val json = reader.readText()
-        val listType = object : TypeToken<List<RecipeDTO>>() {}.type
-        return Gson().fromJson(json, listType)
-    }
+        for (i in 0..<jsonArray.length()) {
+//            Log.i("GSON", "JSON Array: ${jsonArray[i]}")
+//            Log.i("GSON", "JSON Array: ${jsonArray.getJSONObject(i).getString("name")}")
 
-    // Function to provide a list of RecipeModel objects
-    fun getRecipes(): List<RecipeModel> {
-        val RecipeDTOs = readJsonData()
-        return RecipeDTOs.map { it.toModel() }
-    }
+            name = jsonArray.getJSONObject(i).getString("name")
+            image = jsonArray.getJSONObject(i).getString("image")
+            description = jsonArray.getJSONObject(i).getString("description")
+            rating = jsonArray.getJSONObject(i).getDouble("rating").toFloat()
 
-    fun getAllRecipes(context: Context): List<RecipeModel>? {
-        val inputStream = context.resources.openRawResource(R.raw.recipes)
-        val reader = BufferedReader(InputStreamReader(inputStream))
-        val json = reader.readText()
-        val listType = object : TypeToken<List<RecipeDTO>>() {}.type
-        val RecipeDTOs = Gson().fromJson<List<RecipeDTO>>(json, listType)
-        return RecipeDTOs.map { it.toModel() }
+            val recipe = RecipeModel(
+                id = i,
+                name = name,
+                image = image,
+                description = description,
+                rating = rating
+            )
+
+            recipeModels.add(recipe)
+        }
     }
 }
+

@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".fragments.RecipesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/recipes" />
+        android:id="@+id/recipesRecyclerView"
+        tools:listitem="@layout/list_item"
+        />
 
 </FrameLayout>

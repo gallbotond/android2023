@@ -9,7 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.R
+import com.example.foodapp.adapter.RecipesAdapter
+import com.example.foodapp.databinding.FragmentRecipesBinding
 import com.example.foodapp.model.RecipeModel
 import com.example.foodapp.view.RecipeListViewModel
 
@@ -28,27 +32,31 @@ class RecipesFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private val recipeViewModel: RecipeListViewModel by viewModels()
+    private lateinit var data: ArrayList<RecipeModel>
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: RecipesAdapter
+
+//    private val recipeViewModel: RecipeListViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Load instructions data
-        recipeViewModel.loadRecipeData(requireContext())
+        val repository = RecipeRepository()
+        repository.fetchData(this.requireContext())
 
-        // Observe instructions data
-        recipeViewModel.recipeModels.observe(viewLifecycleOwner) { instructions ->
-            for (instructionModel in instructions) {
-                Log.d("Recipes", instructionModel.toString())
-            }
-        }
+        data = repository.recipeModels
+
+        Log.i("GSON", "Data: $data")
+
+        recyclerView = view.findViewById(R.id.recipesRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+//        recyclerView.setHasFixedSize(true)
+
+        adapter = RecipesAdapter(data)
+        recyclerView.adapter = adapter
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
@@ -78,4 +86,5 @@ class RecipesFragment : Fragment() {
                 }
             }
     }
+
 }

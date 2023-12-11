@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Low-Carb Avocado Chicken Salad",
+    "description": "This chicken salad is a lunchtime delight! Packed with creamy avocado, tender chicken, and crunchy veggies, it's a healthy and satisfying meal that won't weigh you down. Tossed in a tangy yogurt dressing with a hint of spice, it's a flavor explosion that's perfect for a light meal.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/45b4efeb5d2c4d29970344ae165615ab/FixedFBFinal.jpg",
+    "rating": 0.920482,
+    "nutrition": {
+      "fiber": 3,
+      "updated_at": "2021-05-03T13:23:58+02:00",
+      "protein": 29,
+      "fat": 8,
+      "calories": 250,
+      "sugar": 8,
+      "carbohydrates": 13
+    }
+  },
+  {
+    "name": "Tomato And Anchovy Pasta",
+    "description": "Savor the bold flavors of this Tomato and Anchovy Pasta, a perfect weeknight meal that's both simple and satisfying. With a zesty tomato sauce and umami-packed anchovies, this dish will have your taste buds dancing in no time!",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216182.jpg",
+    "rating": 0.881579,
+    "nutrition": {
+      "calories": 755,
+      "sugar": 9,
+      "carbohydrates": 109,
+      "fiber": 19,
+      "updated_at": "2022-10-01T08:04:39+02:00",
+      "protein": 24,
+      "fat": 22
+    }
+  },
+  {
+    "name": "Blueberry Cream Muffins",
+    "description": "",
+    "image": "https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/recipes/4e9524578f544c888af761e10630593b.jpeg",
+    "rating": 0.965753,
+    "nutrition": {
+      "fat": 13,
+      "calories": 264,
+      "sugar": 13,
+      "carbohydrates": 32,
+      "fiber": 0,
+      "updated_at": "2023-08-11T08:05:49+02:00",
+      "protein": 4
+    }
+  },
+  {
+    "name": "One-Pot Lemon Garlic Shrimp Pasta",
+    "description": "This easy 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to. ",
+    "image": "https://img.buzzfeed.com/video-api-prod/assets/9ee2dadcbfcb4095872e6cdbaa24ff14/Thumb_A_FB.jpg",
+    "rating": 0.980085,
+    "nutrition": {
+      "carbohydrates": 49,
+      "fiber": 4,
+      "updated_at": "2022-10-02T08:11:38+02:00",
+      "protein": 38,
+      "fat": 37,
+      "calories": 678,
+      "sugar": 2
+    }
+  },
+  {
+    "name": "3-Ingredient Teriyaki Chicken",
+    "description": "This 3-Ingredient Teriyaki Chicken is a total game-changer - with its perfect balance of salty and sweet, this dish is sure to kick up your weeknights with minimal effort required.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/1d47125afffa461a9711758f632306b8/BFV12484_3-IngredientDinners-FB1080SQ.jpg",
+    "rating": 0.903224,
+    "nutrition": {
+      "protein": 48,
+      "fat": 9,
+      "calories": 366,
+      "sugar": 17,
+      "carbohydrates": 20,
+      "fiber": 0,
+      "updated_at": "2022-11-30T07:09:52+01:00"
+    }
+  },
+  {
+    "name": "One-Pot Garlic Parmesan Pasta",
+    "description": "One pot. Garlic. Parmesan. Pasta. Need we say more? This dish is the ultimate in easy weeknight meals, with all the flavor and none of the fuss.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/f69a7f4192b94d8395757b365ac6d866/GarlicParmPasta.jpg",
+    "rating": 0.953242,
+    "nutrition": {
+      "sugar": 6,
+      "carbohydrates": 49,
+      "fiber": 1,
+      "updated_at": "2023-06-16T08:08:15+02:00",
+      "protein": 13,
+      "fat": 10,
+      "calories": 334
+    }
+  },
+  {
+    "name": "Creamy Cajun Pasta",
+    "description": "Say hello to a taste of the bayou with this creamy Cajun pasta! Savory sausage and a bevy of vegetables get a spicy kick with a Cajun-inspired seasoning blend, all tossed in a luscious creamy sauce. Best of all, it all comes together in just one pot for easy prepa and clean-up!",
+    "image": "https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/recipes/6d9b54963ad9442aa9320076a7bbf0bf.jpeg",
+    "rating": 0.977778,
+    "nutrition": {
+      "carbohydrates": 83,
+      "fiber": 4,
+      "updated_at": "2020-12-14T00:37:58+01:00",
+      "protein": 18,
+      "fat": 52,
+      "calories": 887,
+      "sugar": 12
+    }
+  },
+  {
+    "name": "Chocolate Mug Cake",
+    "description": "Indulge in a rich and decadent chocolate hazelnut dessert that's ready in minutes with this mug cake recipe. Made with simple pantry staples and a generous dollop of chocolate hazelnut spread, this cake is moist, fudgy, and oozing with luscious chocolate flavor. ",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/d33059f213074dda896f7e2f96450be2/BFV18819_MugCakesFourWays-FB.jpg",
+    "rating": 0.896812,
+    "nutrition": {
+      "carbohydrates": 72,
+      "fiber": 4,
+      "updated_at": "2021-05-03T13:28:18+02:00",
+      "protein": 8,
+      "fat": 20,
+      "calories": 500,
+      "sugar": 36
+    }
+  },
+  {
+    "name": "Garlic Shrimp Bacon Alfredo",
+    "description": "This garlic bacon shrimp alfredo is the ultimate weeknight indulgence, with succulent shrimp, smoky bacon, and a rich, creamy sauce that will have your taste buds dancing with delight.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/1c17e86f91b94748bf4cf52ba781c789/BFV16661_ShrimpAlfredoDinnerForTwoFINAL.jpg",
+    "rating": 0.976619,
+    "nutrition": {
+      "carbohydrates": 101,
+      "fiber": 4,
+      "updated_at": "2023-08-11T08:11:59+02:00",
+      "protein": 58,
+      "fat": 63,
+      "calories": 1147,
+      "sugar": 8
+    }
+  },
+  {
+    "name": "Creamy Chicken Penne Pasta",
+    "description": "If you're in need of a hug in a bowl, this creamy chicken penne pasta is just the ticket. With tender chicken, perfectly cooked pasta, and a velvety sauce, it's pure comfort in a bowl.",
+    "image": "https://img.buzzfeed.com/video-api-prod/assets/641e3c1a5f2a48f29b605bff9cbe72b6/BFV10263_CreamyChickenPenne-Thumb1080.jpg",
+    "rating": 0.978248,
+    "nutrition": {
+      "fiber": 2,
+      "updated_at": "2022-10-02T08:05:26+02:00",
+      "protein": 47,
+      "fat": 46,
+      "calories": 703,
+      "sugar": 5,
+      "carbohydrates": 37
+    }
+  },
+  {
+    "name": "3 Ingredient Peanut Butter Cookies",
+    "description": "Whip up these scrumptious 3-Ingredient Peanut Butter Cookies in a snap! With just peanut butter, sugar, and an egg, you'll have a delightful treat that's perfect for satisfying your sweet tooth.",
+    "image": "https://img.buzzfeed.com/video-api-prod/assets/334c9eee7f37412fba5111e291dd6cb1/YT_Thumb.jpg",
+    "rating": 0.914217,
+    "nutrition": {
+      "sugar": 3,
+      "carbohydrates": 5,
+      "fiber": 0,
+      "updated_at": "2021-05-03T13:28:49+02:00",
+      "protein": 2,
+      "fat": 5,
+      "calories": 81
+    }
+  },
+  {
+    "name": "Easy One-Pot Mac ‘n’ Cheese",
+    "description": "This easy mac and cheese is a quick and delicious dinner option for busy weeknights! Elbow macaroni is cooked right in the same pot with milk, butter, and Cheddar cheese, resulting in a creamy and comforting dish that's sure to please everyone. Add in some chopped bacon or cooked veggies for a twist on the classic recipe, or enjoy it as-is for a simple and satisfying meal.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/3c0710e0531b41b7804acf4a52ee15be/FB_04forpkg.jpg",
+    "rating": 0.875866,
+    "nutrition": {
+      "fiber": 0,
+      "updated_at": "2023-08-19T08:07:43+02:00",
+      "protein": 33,
+      "fat": 47,
+      "calories": 865,
+      "sugar": 12,
+      "carbohydrates": 71
+    }
+  },
+  {
+    "name": "One-Pot Cheeseburger Pasta",
+    "description": "This One-Pot Cheeseburger Pasta is a delightful twist on a classic favorite. With its savory flavors and easy clean-up, this dish is perfect for busy weeknights and satisfying comfort food cravings.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/36ae3598f6ce40029766f7f2ae643826/BFV29964_1lbGroundBeef4Dinners_FB1080SQ.jpg",
+    "rating": 0.944962,
+    "nutrition": {
+      "updated_at": "2022-10-02T08:08:29+02:00",
+      "protein": 33,
+      "fat": 29,
+      "calories": 699,
+      "sugar": 12,
+      "carbohydrates": 66,
+      "fiber": 0
+    }
+  },
+  {
+    "name": "Creamy Lemon Chicken",
+    "description": "Whip up this zesty Creamy Lemon Chicken for a dinner that's bursting with flavor! With tender chicken, a velvety sauce, and a hint of citrus, this dish is sure to become a weeknight favorite.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/198fa339577d4857adcb59ab94516ac8/fb.jpg",
+    "rating": 0.967562,
+    "nutrition": {
+      "carbohydrates": 31,
+      "fiber": 35,
+      "updated_at": "2023-08-11T08:11:23+02:00",
+      "protein": 56,
+      "fat": 34,
+      "calories": 636,
+      "sugar": 2
+    }
+  },
+  {
+    "name": "How To Make The Fluffiest Pancakes",
+    "description": "These fluffy pancakes are made with buttermilk, flour, and eggs, then topped with butter and syrup for a classic breakfast treat.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/167797.jpg",
+    "rating": 0.933414,
+    "nutrition": {
+      "fat": 15,
+      "calories": 301,
+      "sugar": 6,
+      "carbohydrates": 33,
+      "fiber": 13,
+      "updated_at": "2022-10-02T08:07:01+02:00",
+      "protein": 7
+    }
+  },
+  {
+    "name": "Easy Glazed Pork Chops",
+    "description": "Easy glazed pork chops are a quick and tasty dinner option that can be made in under 30 minutes. They are coated in a sweet and savory glaze that caramelizes on the outside of the pork chops when cooked.",
+    "image": "https://img.buzzfeed.com/video-api-prod/assets/0ddb27186a9249a583b790ebaf9e137a/Thumb_A_-_FB.jpg",
+    "rating": 0.971633,
+    "nutrition": {
+      "sugar": 8,
+      "carbohydrates": 9,
+      "fiber": 0,
+      "updated_at": "2023-08-11T08:12:32+02:00",
+      "protein": 35,
+      "fat": 37,
+      "calories": 512
+    }
+  },
+  {
+    "name": "Garlic Shrimp Scampi",
+    "description": "This garlic shrimp scampi is a flavor explosion in your mouth! The succulent shrimp is cooked to perfection and coated in a heavenly garlic and butter sauce. Toss in some lemon juice and parsley, and you've got yourself a dish that'll transport you straight to the Italian coast.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/1320d1aa7714494cb4a8fe01faf71465/BFV9208_Spaghetti4Ways.jpg",
+    "rating": 0.96884,
+    "nutrition": {
+      "protein": 61,
+      "fat": 23,
+      "calories": 810,
+      "sugar": 3,
+      "carbohydrates": 86,
+      "fiber": 3,
+      "updated_at": "2022-10-02T08:09:23+02:00"
+    }
+  },
+  {
+    "name": "Healthy Banana Pancakes",
+    "description": "These pancakes are fluffy, moist, and delicious, and best of all, they're healthy! Made with ripe bananas, whole wheat flour, and no added sugar, they're a guilt-free breakfast option.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/5f6e823f41bb4779829a1486cbbbfa12/BFV18275_HealthyPancakes4Ways_FB1080SQ.jpg",
+    "rating": 0.865076,
+    "nutrition": {
+      "fat": 4,
+      "calories": 186,
+      "sugar": 10,
+      "carbohydrates": 30,
+      "fiber": 4,
+      "updated_at": "2022-10-02T08:09:29+02:00",
+      "protein": 7
+    }
+  },
+  {
+    "name": "Buttermilk Pancakes",
+    "description": "Is there any better way to start the day than with a stack of warm and <a href=\"https://tasty.co/recipe/tasty-101-buttermilk-pancakes\">fluffy pancakes</a>? Buttermilk gives these cakes that signature tang, while a combination of baking powder and baking soda creates an unbeatable lift. This recipe yields perfect plain pancakes every time, but feel free to add your favorite mix-ins—like blueberries, chocolate chips, or bananas—to the batter before cooking. Bonus? Pancakes freeze well, so make a double batch and store in the freezer for easy breakfasts all week. No stovetop flipping required!",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/51a9c5b156c84977ae50004b5ef622b2/finalFB.jpg",
+    "rating": 0.943643,
+    "nutrition": {
+      "sugar": 10,
+      "carbohydrates": 64,
+      "fiber": 8,
+      "updated_at": "2023-08-11T08:09:11+02:00",
+      "protein": 15,
+      "fat": 14,
+      "calories": 450
+    }
+  },
+  {
+    "name": "Spaghetti With Garlic And Oil",
+    "description": "Spaghetti with garlic and oil is a classic Italian dish that's quick and easy to make, with just a few simple ingredients.",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/8fc00a45259a49d49d9100a34f2087eb/BFV44742_PantryPasta_FB_Final.jpg",
+    "rating": 0.921215,
+    "nutrition": {
+      "carbohydrates": 42,
+      "fiber": 1,
+      "updated_at": "2023-08-11T08:09:11+02:00",
+      "protein": 7,
+      "fat": 10,
+      "calories": 299,
+      "sugar": 1
+    }
+  }
+]

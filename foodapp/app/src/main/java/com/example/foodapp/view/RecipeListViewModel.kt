@@ -16,7 +16,7 @@ class RecipeListViewModel(private val repository: RecipeRepository) : ViewModel(
 
     // Load all recipes using the repository
     fun loadRecipeData(context: Context) {
-        _recipeModels.value = repository.getAllRecipes(context)
+//        _recipeModels.value = repository.getAllRecipes(context)
     }
 
     fun loadInstructionData(requireContext: Context) {
