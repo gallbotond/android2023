@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
@@ -16,6 +17,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.R
+import com.example.foodapp.RecipeDao
+import com.example.foodapp.RecipeDataBase
 import com.example.foodapp.adapter.RecipesAdapter
 import com.example.foodapp.databinding.FragmentRecipesBinding
 import com.example.foodapp.model.RecipeModel
@@ -31,7 +34,8 @@ class RecipesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentRecipesBinding.bind(view)
-        val repository = RecipeRepository()
+
+        val repository = RecipeRepository(RecipeDao())
         repository.fetchData(this.requireContext())
 
         data = repository.recipeModels
@@ -69,10 +73,10 @@ class RecipesFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_recipes, container, false)
 
-//        val item: ConstraintLayout = view.findViewById(R.id.recipeListItem)
-//        item.setOnClickListener {
-//
-//        }
+        val floatingActionButton: Button = view.findViewById(R.id.floatingActionButton)
+        floatingActionButton.setOnClickListener {
+            findNavController().navigate(R.id.action_recipesFragment_to_recipeAddFragment)
+        }
 
         return view
     }

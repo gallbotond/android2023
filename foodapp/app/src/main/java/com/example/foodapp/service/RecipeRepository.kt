@@ -1,46 +1,18 @@
 import android.content.Context
 import android.util.Log
+import androidx.lifecycle.LiveData
+import com.example.foodapp.RecipeDao
+import com.example.foodapp.RecipeEntity
 import com.example.foodapp.model.RecipeModel
 import org.json.JSONArray
 import java.io.InputStream
 
-class RecipeRepository {
-    var recipeModels: ArrayList<RecipeModel> = ArrayList<RecipeModel>()
-    fun fetchData(context: Context) {
-        Log.i("GSON", "Fetching data...")
-        Log.i("GSON", "Context: $context")
-        val inputStream: InputStream = context.assets.open("recipes.json")
-        val json = inputStream.bufferedReader().use { it.readText() }
-        Log.i("GSON", "JSON read")
-//        val buffer = ByteArray(inputStream.available())
-//        Log.i("GSON", "Buffer created, length: ${buffer.size}")
-        val jsonArray = JSONArray(json)
-        Log.i("GSON", "JSON Array read")
+class RecipeRepository(private val recipeDao: RecipeDao) {
+//    var recipeModels: ArrayList<RecipeModel> = ArrayList<RecipeModel>()
+    val readAllData: LiveData<List<RecipeEntity>> = recipeDao.readRecipes()
 
-        var name: String
-        var image: String
-        var description: String
-        var rating: Float
-
-        for (i in 0..<jsonArray.length()) {
-//            Log.i("GSON", "JSON Array: ${jsonArray[i]}")
-//            Log.i("GSON", "JSON Array: ${jsonArray.getJSONObject(i).getString("name")}")
-
-            name = jsonArray.getJSONObject(i).getString("name")
-            image = jsonArray.getJSONObject(i).getString("image")
-            description = jsonArray.getJSONObject(i).getString("description")
-            rating = jsonArray.getJSONObject(i).getDouble("rating").toFloat()
-
-            val recipe = RecipeModel(
-                id = i,
-                name = name,
-                image = image,
-                description = description,
-                rating = rating
-            )
-
-            recipeModels.add(recipe)
-        }
+    suspend fun addRecipe(recipeEntity: RecipeEntity) {
+        recipeDao.addRecipe(recipeEntity)
     }
 }
 
