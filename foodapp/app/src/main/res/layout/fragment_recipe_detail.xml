@@ -1,39 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recipeDetailsFragment"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    tools:context=".fragments.RecipeDetailFragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/recipeDetailsFragment"
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".fragments.RecipeDetailFragment">
+        android:text="@string/recipes" />
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:id="@+id/recipeTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Title"
-            android:textAlignment="center"
-            android:textSize="36sp" />
-
-        <ImageView
-            android:id="@+id/recipeImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_background" />
-
-        <TextView
-            android:id="@+id/recipeSummary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Make sure to set attachToRoot attribute to false in the inflate() method of your databinding or whatever you're using to display views like so."
-            android:textSize="24sp" />
-
-    </LinearLayout>
-</ScrollView>
+</FrameLayout>
