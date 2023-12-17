@@ -69,6 +69,7 @@ dependencies {
     androidTestImplementation("androidx.navigation:navigation-testing:$navVersion")
 
     // Jetpack Compose Integration
+<<<<<<< HEAD
     implementation("androidx.navigation:navigation-compose:$navVersion")
 
     // Room
@@ -84,4 +85,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
+=======
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+>>>>>>> parent of 313b87b (started implementing room)
 }
