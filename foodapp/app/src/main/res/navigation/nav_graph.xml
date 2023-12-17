@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_recipesFragment_to_recipeDetailsFragment"
             app:destination="@id/recipeDetailsFragment" />
+        <action
+            android:id="@+id/action_recipesFragment_to_recipeAddFragment"
+            app:destination="@id/recipeAddFragment" />
     </fragment>
 
     <fragment
@@ -47,5 +50,14 @@
 
     <action android:id="@+id/action_home_to_recipes"
         app:destination="@id/recipesFragment" />
+    <fragment
+        android:id="@+id/recipeAddFragment"
+        android:name="com.example.foodapp.fragments.RecipeAddFragment"
+        android:label="fragment_recipe_add"
+        tools:layout="@layout/fragment_recipe_add" >
+        <action
+            android:id="@+id/action_recipeAddFragment_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+    </fragment>
 
 </navigation>
