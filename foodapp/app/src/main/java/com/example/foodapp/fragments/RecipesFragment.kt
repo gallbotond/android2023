@@ -17,9 +17,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.R
 import com.example.foodapp.adapter.RecipesAdapter
+import com.example.foodapp.adapter.RecipesAdapterDB
+import com.example.foodapp.database.RecipeDatabase
 import com.example.foodapp.databinding.FragmentRecipesBinding
 import com.example.foodapp.model.RecipeModel
 import com.example.foodapp.view.RecipeListViewModel
+import com.example.foodapp.view.RecipeViewModel
 
 
 class RecipesFragment : Fragment() {
@@ -27,6 +30,10 @@ class RecipesFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: RecipesAdapter
     private lateinit var binding: FragmentRecipesBinding
+
+    private lateinit var database: RecipeDatabase;
+    lateinit var viewModel: RecipeViewModel;
+    lateinit var adapterDB: RecipesAdapterDB;
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -60,6 +67,9 @@ class RecipesFragment : Fragment() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = FragmentRecipesBinding.inflate(layoutInflater)
+
+        viewModel = ViewModelProvider(this).get(RecipeViewModel::class.java)
     }
 
     override fun onCreateView(
