@@ -14,12 +14,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.navArgs
 import com.example.foodapp.R
+import com.example.foodapp.db.RecipeEntity
 import com.example.foodapp.model.RecipeModel
 import java.util.concurrent.Executors
 
 class RecipeDetailFragment : Fragment() {
 
-    private lateinit var recipe: RecipeModel
+    private lateinit var recipe: RecipeEntity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

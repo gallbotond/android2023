@@ -18,30 +18,34 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.R
 import com.example.foodapp.adapter.RecipesAdapter
 import com.example.foodapp.databinding.FragmentRecipesBinding
+import com.example.foodapp.db.ListAdapter
+import com.example.foodapp.db.RecipeViewModel
 import com.example.foodapp.model.RecipeModel
 import com.example.foodapp.view.RecipeListViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class RecipesFragment : Fragment() {
-    private lateinit var data: ArrayList<RecipeModel>
+//    private lateinit var data: ArrayList<RecipeModel>
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: RecipesAdapter
+//    private lateinit var adapter: RecipesAdapter
     private lateinit var binding: FragmentRecipesBinding
+
+    private lateinit var mRecipeViewModel: RecipeViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentRecipesBinding.bind(view)
-        val repository = RecipeRepository()
-        repository.fetchData(this.requireContext())
-
-        data = repository.recipeModels
-
-        recyclerView = view.findViewById(R.id.recipesRecyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-
-        adapter = RecipesAdapter(data)
-        recyclerView.adapter = adapter
+//        val repository = RecipeRepository()
+//        repository.fetchData(this.requireContext())
+//
+//        data = repository.recipeModels
+//
+//        recyclerView = view.findViewById(R.id.recipesRecyclerView)
+//        recyclerView.layoutManager = LinearLayoutManager(context)
+//
+//        adapter = RecipesAdapter(data)
+//        recyclerView.adapter = adapter
 
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +62,17 @@ class RecipesFragment : Fragment() {
         val addRecipeButton = view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
         addRecipeButton.setOnClickListener {
             findNavController().navigate(R.id.action_recipesFragment_to_addFragment)
+        }
+
+        val adapter = ListAdapter()
+
+        recyclerView = view.findViewById(R.id.recipesRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = adapter
+
+        mRecipeViewModel = ViewModelProvider(this).get(RecipeViewModel::class.java)
+        mRecipeViewModel.readAllData.observe(viewLifecycleOwner) { recipe ->
+            adapter.setData(recipe)
         }
 
         return view

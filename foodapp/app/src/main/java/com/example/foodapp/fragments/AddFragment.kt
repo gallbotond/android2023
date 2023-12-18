@@ -1,6 +1,8 @@
 package com.example.foodapp.fragments
 
+import RecipeRepository
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +36,15 @@ class AddFragment : Fragment() {
             insertDataToDatabase()
         }
 
+//        val addAllButton = view.findViewById<Button>(R.id.addAll)
+//        addAllButton.setOnClickListener {
+//            RecipeRepository().fetchData(this.requireContext()).forEach {
+//                val recipe = RecipeEntity(0, it.name, it.image, it.description, it.rating)
+//                mRecipeViewModel.addRecipe(recipe)
+//                Log.i("GSON", "Added ${it.name}")
+//            }
+//        }
+
         return view
     }
 
@@ -41,7 +52,15 @@ class AddFragment : Fragment() {
         val recipeName = view?.findViewById<EditText>(R.id.name)?.text.toString()
         val recipeDescription = view?.findViewById<EditText>(R.id.desc)?.text.toString()
         val recipeImg = view?.findViewById<EditText>(R.id.url)?.text.toString()
-        val recipeRating = view?.findViewById<EditText>(R.id.rate)?.text.toString().toFloat()
+
+        val recipeRatingString = view?.findViewById<EditText>(R.id.rate)?.text.toString()
+        val recipeRating = if (recipeRatingString.isEmpty()) {
+            // Handle the case where the string is empty. For example, set a default value:
+            0.0f
+        } else {
+            // If the string is not empty, parse it as a float:
+            recipeRatingString.toFloat()
+        }
 
         if(inputCheck(recipeName, recipeDescription, recipeImg, recipeRating)) {
             // Create Recipe Object
@@ -62,7 +81,9 @@ class AddFragment : Fragment() {
         recipeImg: String,
         recipeRating: Float
     ): Boolean {
-        return !(recipeName.isEmpty() || recipeDescription.isEmpty() || recipeImg.isEmpty() || recipeRating.toString().isEmpty())
+        val empty = !(recipeName.isEmpty() || recipeDescription.isEmpty() || recipeImg.isEmpty() || recipeRating.toString().isEmpty())
+        Log.i("GSON", "Empty: $empty")
+        return empty
     }
 
 }

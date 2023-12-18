@@ -5,8 +5,8 @@ import org.json.JSONArray
 import java.io.InputStream
 
 class RecipeRepository {
-    var recipeModels: ArrayList<RecipeModel> = ArrayList<RecipeModel>()
-    fun fetchData(context: Context) {
+    var recipeModels: ArrayList<RecipeModel> = ArrayList()
+    fun fetchData(context: Context): ArrayList<RecipeModel> {
         Log.i("GSON", "Fetching data...")
         Log.i("GSON", "Context: $context")
         val inputStream: InputStream = context.assets.open("recipes.json")
@@ -41,6 +41,8 @@ class RecipeRepository {
 
             recipeModels.add(recipe)
         }
+
+        return recipeModels
     }
 }
 

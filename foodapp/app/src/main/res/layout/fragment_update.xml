@@ -3,12 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AddFragment"
+    tools:context=".fragments.UpdateFragment"
     android:orientation="vertical"
-    android:padding="16dp"
     android:gravity="center">
 
-    <!-- TODO: Update blank fragment layout -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,14 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/add"
-        android:text="Add"
+        android:text="Edit"
         />
-
-<!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/addAll"-->
-<!--        android:text="Add All"-->
-<!--        />-->
 
 </LinearLayout>
