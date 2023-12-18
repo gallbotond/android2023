@@ -20,6 +20,7 @@ import com.example.foodapp.adapter.RecipesAdapter
 import com.example.foodapp.databinding.FragmentRecipesBinding
 import com.example.foodapp.model.RecipeModel
 import com.example.foodapp.view.RecipeListViewModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class RecipesFragment : Fragment() {
@@ -42,21 +43,6 @@ class RecipesFragment : Fragment() {
         adapter = RecipesAdapter(data)
         recyclerView.adapter = adapter
 
-        adapter.onItemClick = { recipe ->
-//            Log.i("GSON", "Recipe: $recipe")
-//            val bundle = Bundle()
-//            bundle.putParcelable("recipe", recipe)
-//
-//            val recipeDetailFragment = RecipeDetailFragment()
-//            recipeDetailFragment.arguments = bundle
-//
-//            parentFragmentManager.beginTransaction()
-//                .replace(R.id.myNavHostFragment, recipeDetailFragment)
-//                .addToBackStack(null)
-//                .commit()
-//                val action = RecipesFragmentDirections.action_recipesFragment_to_recipeDetailsFragment(recipe)
-//                findNavController().navigate(action)
-        }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,10 +55,10 @@ class RecipesFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_recipes, container, false)
 
-//        val item: ConstraintLayout = view.findViewById(R.id.recipeListItem)
-//        item.setOnClickListener {
-//
-//        }
+        val addRecipeButton = view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
+        addRecipeButton.setOnClickListener {
+            findNavController().navigate(R.id.action_recipesFragment_to_addFragment)
+        }
 
         return view
     }
